@@ -117,6 +117,7 @@ Solution:
 1. Yes, Jmann. His IP is 192.168.1.7
 2. index=pathcode ("File Upload" OR "File Uploaded")
 | table _time Username IP Filename "File Hash" Event
+
 **👥 Challenge 15: Looking at the uploaded hashes, what were the files called that the two users uploaded? Which one seems like it was malicious?**
 Solution:
 1. EvilScript.exe and proposal.pdf. The file that seemed malicious is: EvilScript.exe
