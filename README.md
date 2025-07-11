@@ -32,6 +32,7 @@ I completed this project as part of CodePath’s CYB102 cybersecurity course to 
 For each challenge, document both:
 1. The challenge answer
 2. The search command used to find the answer
+
 ---
 **👥 Challenge 1:  How many TV shows on Netflix are in the Docuseries genre?**
 1. 170
