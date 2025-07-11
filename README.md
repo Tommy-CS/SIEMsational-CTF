@@ -34,17 +34,17 @@ For each challenge, document both:
 1. 170
 2. index=main host="Netflix" type="TV Show" listed_in="Docuseries"
 | stats count
-
+---
 **👥 Challenge 2:  How many movies on Netflix have a rating of TV-PG?**
 1. 1080
 2. index=main host="Netflix" type="Movie" rating="TV-PG"
 | stats count
-
+---
 **👥 Challenge 3: How many movies on Netflix were released in the year 2020?**
 1. 1034
 2. index=main host="Netflix" type="Movie" release_year="2020"
 | stats count
-
+---
 **👥 Challenge 4: What is the longest duration by season on Netflix, and what is its TV rating?**
 1. 17 seasons, TV-14 (not sure if needed, but the name is Grey’s Anatomy)
 2. index=main host="Netflix" type="TV Show"
