@@ -26,9 +26,9 @@ I completed this project as part of CodePath’s CYB102 cybersecurity course to 
 <img src="https://github.com/user-attachments/assets/6000bb9f-fe86-4b53-9beb-eb9f15e9fdc0" width="600"/>
 
 ## Part 1 - Searching the Netflix Data. Use index=main source=Netflix
-- For each challenge, document both:
-  1. The challenge answer
-  2. The search command used to find the answer
+**For each challenge, document both:**
+**1. The challenge answer**
+**2. The search command used to find the answer**
 
 **👥 Challenge 1:  How many TV shows on Netflix are in the Docuseries genre?**
 1. 170
