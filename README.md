@@ -1,5 +1,5 @@
 # SIEMsational CTF
-I completed this project as part of CodePath’s CYB102 cybersecurity course to apply Splunk skills in a Capture-the-Flag (CTF) challenge. The goal was to solve security-related questions by searching through logs and datasets in Splunk. After completing this project, I strengthened my ability to write SPL search queries, analyze log data, and investigate simulated cyber incidents using Splunk’s Search and Reporting tools.
+I completed this project as part of CodePath’s CYB102 cybersecurity course to apply Splunk skills in a Capture-the-Flag (CTF) challenge. The goal was to solve security-related questions by searching through logs and datasets in Splunk. After completing this project, I strengthened my ability to write SPL search queries, analyze log data, and investigate simulated cyber incidents using Splunk’s Search and Reporting tools. Although I did not provide a screenshot of every challenge, I took some screenshots of the ones I thought were pretty cool and interesting.
 
 ## Tools & Technologies Used
 - Ubuntu 22.04 LTS VM
@@ -28,25 +28,21 @@ I completed this project as part of CodePath’s CYB102 cybersecurity course to 
 ## Part 1 - Searching the Netflix Data. Use index=main source=Netflix
 
 **👥 Challenge 1:  How many TV shows on Netflix are in the Docuseries genre?**
-Solution:
 1. 170
 2. index=main host="Netflix" type="TV Show" listed_in="Docuseries"
 | stats count
 
 **👥 Challenge 2:  How many movies on Netflix have a rating of TV-PG?**
-Solution:
 1. 1080
 2. index=main host="Netflix" type="Movie" rating="TV-PG"
 | stats count
 
 **👥 Challenge 3: How many movies on Netflix were released in the year 2020?**
-Solution:
 1. 1034
 2. index=main host="Netflix" type="Movie" release_year="2020"
 | stats count
 
 **👥 Challenge 4: What is the longest duration by season on Netflix, and what is its TV rating?**
-Solution:
 1. 17 seasons, TV-14 (not sure if needed, but the name is Grey’s Anatomy)
 2. index=main host="Netflix" type="TV Show"
 | rex field=duration "(?<seasons>\d+)" 
@@ -54,39 +50,33 @@ Solution:
 | head 1
 
 **👥 Challenge 5: How many movies on Netflix are listed as action and are rated PG-13?**
-Solution:
 1. 296
 2. index=main host="Netflix" type="Movie" rating="PG-13" 
 | search listed_in="*Action*"
 | stats count
 
 **👥 Challenge 6: How many movies and TV shows on Netflix have their country of origin as Turkey?**
-Solution:
 1. 210
 2. index=main host="Netflix" country="Turkey" 
 | stats count
 
 **👥 Challenge 7: Which release year had the most movies rated G? (Not TV-G)**
-Solution:
 1. 2009
 2. index=main host="Netflix" type="Movie" rating="G" 
 | stats count by release_year
 | sort - count
 
 **👥 Challenge 8: What two TV-Y7 rated shows were released in 2019 and were added to Netflix on November 22, 2019?**
-Solution:
 1. Trolls: The Beat Goes On! AND The Dragon Prince
 2. index=main host="Netflix" type="TV Show" release_year="2019" date_added="November 22, 2019" rating="TV-Y7"
 
 **👥 Challenge 9: Which year had the most movies from the United States?**
-Solution:
 1. 2017
 2. index=main host="Netflix" type="Movie" country="United States" 
 | stats count by release_year
 | sort - count
 
 **👥 Challenge 10: What is the oldest TV show by Release Year on Netflix?**
-Solution:
 1. Pioneers: First Women Filmmakers* (if needed: 1925)
 2. index=main host="Netflix" type="TV show"
 | sort release_year 
@@ -96,30 +86,25 @@ Solution:
 For Part 2, we are investigating an attacker who got into our systems that happened at PathCode Inc. For these logs use index=pathcode
 
 **👥 Challenge 11: What was the IP address that uploaded the malware (MD5 hash: 3AADBF7E527FC1A050E1C97FEA1CBA4D)**
-Solution:
 1. 192.168.1.10
 2. index="pathcode" "3AADBF7E527FC1A050E1C97FEA1CBA4D"
 
 **👥 Challenge 12: What usernames did that IP address try to login to the system as? Which one did they upload a file as?**
-Solution:
 1. ABurke, Admin, Pi. They uploaded the file as ABurke.
 2. index=pathcode IP="192.168.1.10"
 | table _time Username Filename "File Hash" Event
 
 **👥 Challenge 13: What was the User Agent String of the attacker when they successfully uploaded a file?**
-Solution:
 1. Opera/75.0.3969.218
 2. index=pathcode IP="192.168.1.10"
 | table *
 
 **👥 Challenge 14: Did any other users also upload a file around that time? If so, who and what was their IP address?**
-Solution:
 1. Yes, Jmann. His IP is 192.168.1.7
 2. index=pathcode ("File Upload" OR "File Uploaded")
 | table _time Username IP Filename "File Hash" Event
 
 **👥 Challenge 15: Looking at the uploaded hashes, what were the files called that the two users uploaded? Which one seems like it was malicious?**
-Solution:
 1. EvilScript.exe and proposal.pdf. The file that seemed malicious is: EvilScript.exe
 2. index=pathcode ("File Upload" OR "File Uploaded")
 | table _time Username IP Filename "File Hash" Event
