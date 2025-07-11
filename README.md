@@ -90,7 +90,7 @@ For each challenge, document both:
 | table title release_year
 ---
 ## Part 2 - Investigating the Malware (2pts each)
-For Part 2, we are investigating an attacker who got into our systems that happened at PathCode Inc. For these logs use index=pathcode
+- For Part 2, we are investigating an attacker who got into our systems that happened at PathCode Inc. For these logs use index=pathcode
 ---
 **👥 Challenge 11: What was the IP address that uploaded the malware (MD5 hash: 3AADBF7E527FC1A050E1C97FEA1CBA4D)**
 1. 192.168.1.10
