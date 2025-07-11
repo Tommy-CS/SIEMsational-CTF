@@ -17,10 +17,10 @@ I completed this project as part of CodePath’s CYB102 cybersecurity course to 
 ## Screenshots
 ### Finding what usernames the malicious IP address tried to log in as, and what username was used to upload the malware (Challenge 12)
 <img src="https://github.com/user-attachments/assets/0cd2e1fe-6c5f-4d58-b470-55a203db034b" width="600"/>
-
+---
 ### Find what the User Agent String of the attacker was when the successfully uploaded a file (Challenge 13)
 <img src="https://github.com/user-attachments/assets/fd0b9663-b66a-46e4-9987-b2084f82862c" width="600"/>
-
+---
 ### Identifying the IP and username that sent the malicious file (Challenge 14-15)
 - As you can see, the IP that sent "EvilScript.exe" is 192.168.1.10. We can see that the username "ABurke" uploaded this file.
 <img src="https://github.com/user-attachments/assets/6000bb9f-fe86-4b53-9beb-eb9f15e9fdc0" width="600"/>
