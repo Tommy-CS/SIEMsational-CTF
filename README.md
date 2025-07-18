@@ -102,9 +102,9 @@ For each challenge, document both:
 | table _time Username Filename "File Hash" Event
 ---
 **👥 Challenge 13: What was the User Agent String of the attacker when they successfully uploaded a file?**
-1. Opera/75.0.3969.218
-2. index=pathcode IP="192.168.1.10"
-| table *
+1. Firefox/89.0
+2. index=pathcode IP="192.168.1.10" Event=”File Upload”
+| table “User Agent”
 ---
 **👥 Challenge 14: Did any other users also upload a file around that time? If so, who and what was their IP address?**
 1. Yes, Jmann. His IP is 192.168.1.7
