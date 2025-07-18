@@ -20,7 +20,7 @@ I completed this project as part of CodePath’s CYB102 cybersecurity course to 
 
 ---
 ### Find what the User Agent String of the attacker was when the successfully uploaded a file (Challenge 13)
-<img src="https://github.com/user-attachments/assets/fd0b9663-b66a-46e4-9987-b2084f82862c" width="600"/>
+<img src="https://github.com/user-attachments/assets/7d387c03-165b-4347-a420-6aadb6a111d5" width="600"/>
 
 ---
 
